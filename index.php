@@ -11,6 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="<?php echo BASE_URL."css/style.css" ?>" type="text/css" rel="stylesheet" />
     <title>Fiks</title>
 </head>
 <body>
@@ -27,7 +28,7 @@
                     <a href="<?php echo BASE_URL."index.php?page=register"; ?>">Register</a>
                 </div>
 
-                <a href="<?php echo BASE_URL."index.php?page=keranjang"; ?>">
+                <a href="<?php echo BASE_URL."index.php?page=keranjang"; ?>" id="button-keranjang">
                     <img src="<?php echo BASE_URL."images/cart.png"; ?>" />
                 </a>
             </div>
