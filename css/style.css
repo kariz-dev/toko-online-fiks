@@ -85,6 +85,8 @@ body {
 
 .element-form span input[type="text"],
 .element-form span input[type="password"],
+.element-form span input[type="email"],
+.element-form span input[type="phone"],
 .element-form span textarea,
 .element-form span select {
     width: 100%;
@@ -98,7 +100,7 @@ body {
     color: white;
     padding: 7px 20px;
     border-radius: 3px;
-    font-size: 9px;
+    font-size: 1px;
     cursor: pointer;
 }
 

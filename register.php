@@ -9,17 +9,17 @@
 
         <div class="element-form">
             <label>Email</label>
-            <span><input type="text" name="email" /></span>
+            <span><input type="email" name="email" /></span>
         </div>
 
         <div class="element-form">
             <label>Nomor Telepon</label>
-            <span><input type="text" name="phone" /></span>
+            <span><input type="phone" name="phone" /></span>
         </div>
 
         <div class="element-form">
             <label>Alamat</label>
-            <span><textarea name="alamat"><textarea></span>
+            <span><textarea name="alamat"></textarea></span>
         </div>
 
         <div class="element-form">
