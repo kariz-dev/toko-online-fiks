@@ -6,4 +6,4 @@
     $database = "fiks";
 
     // untuk melakukan koneksi ke database mysqli
-    $koneksi = mysqli_connect($server, $username, $password, $database) or die("koneksi ke database gagal!");
+    $koneksi = mysqli_connect($server, $username, $password, $database) OR DIE("koneksi ke database gagal!");

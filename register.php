@@ -1,6 +1,6 @@
 <div id="container-user-akses">
 
-    <form action="<?php echo BASE_URL."proses_register.php"; ?>" methode="POST">
+    <form action="<?php echo BASE_URL."proses_register.php"; ?>" method="POST">
 
         <div class="element-form">
             <label>Nama Lengkap</label>
@@ -9,12 +9,12 @@
 
         <div class="element-form">
             <label>Email</label>
-            <span><input type="email" name="email" /></span>
+            <span><input type="text" name="email" /></span>
         </div>
 
         <div class="element-form">
             <label>Nomor Telepon</label>
-            <span><input type="phone" name="phone" /></span>
+            <span><input type="text" name="phone" /></span>
         </div>
 
         <div class="element-form">
