@@ -16,7 +16,7 @@
         }else if($notif == "email") {
             echo"<div class='notif'>Maaf email yang kamu masukan sudah terdaftar</div>";
         }
-
+    ?>
         <div class="element-form">
             <label>Nama Lengkap</label>
             <span><input type="text" name="nama_lengkap" value="<?php echo $nama_lengkap ?>"/></span>
