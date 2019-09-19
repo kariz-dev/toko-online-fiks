@@ -13,5 +13,15 @@
     }else{
         $row =mysqli_fetch_assoc($query);
 
-        echo $row['nama'];
+        // membuat session
+        // Session adalah sebuah varibel sementara yang diletakkan di server. 
+        // Di mana PHP bisa mengambil nilai yang tersimpan di server walaupun kita membuka halaman baru. 
+        // Biasanya session akan hilang jika anda menutup browser.
+        session_start();
+
+        $_SESSION['user_id'] = $row['user_id'];
+        $_SESSION['nama'] = $row['nama'];
+        $_SESSION['level'] = $row['level'];
+
+        header("location: ".BASE_URL."index.php?page=my_profile&module=pesanan&action=list");
     }

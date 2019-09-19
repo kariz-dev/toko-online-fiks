@@ -1,9 +1,15 @@
 <?php
 
+    session_start();
+
     // dengan kita mengetikan include_once kita dapat mengakses semua data yang ada pada file helper
     include_once("function/helper.php");
 
     $page = isset($_GET['page']) ? $_GET['page'] : false;
+
+    $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
+    $nama = isset($_SESSION['nama']) ? $_SESSION['nama'] : false;
+    $level =isset()$_SESSION['level'] ?$_SESSION['level'] : false;
 
 ?>
 
