@@ -1,5 +1,5 @@
-<div class="bg-page-profile">
-    <div class="menu-profile">
+<div id="bg-page-profile">
+    <div id="menu-profile">
         <ul>
             <li>
                 <a href="<?php echo BASE_URL."index.php?page=my_profile&module=kategori&action=list"; ?>">Kategori</a>
@@ -21,7 +21,7 @@
             </li>
         </ul>
     </div>
-    <div class="profile-content">
+    <div id="profile-content">
         Data Empty
     </div>
 </div>
