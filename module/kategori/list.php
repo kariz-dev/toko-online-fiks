@@ -24,9 +24,11 @@
                     <td>$row</td>
                     <td>$row</td>
                     <td>
-                        <a class='".BASE_URL."index.php?page=my_profile&module=kategori&action=formkategori_id=$row[kategori_id]>Edit</a>
+                        <a class='".BASE_URL."index.php?page=my_profile&module=kategori&action=formkategori_id=$row[kategori_id]'>Edit</a>
                     </td>
                 </tr>";
+
+            $no++;
         }
 
         echo"<table/>";
