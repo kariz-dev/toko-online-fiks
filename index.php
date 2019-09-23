@@ -4,6 +4,7 @@
 
     // dengan kita mengetikan include_once kita dapat mengakses semua data yang ada pada file helper
     include_once("function/helper.php");
+    include_once("function/koneksi.php");
 
     $page = isset($_GET['page']) ? $_GET['page'] : false;
 
