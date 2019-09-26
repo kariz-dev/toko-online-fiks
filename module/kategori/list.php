@@ -21,10 +21,10 @@
         while($row=mysqli_fetch_assoc($queryKategori)) {
             echo "<tr>
                     <td class='kolom-nomor'>$no</td>
-                    <td class='kiri'>$row</td>
-                    <td class='tengah'>$row</td>
+                    <td class='kiri'>$row[kategori]</td>
+                    <td class='tengah'>$row[status]</td>
                     <td class='tengah'>
-                        <a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=kategori&action=formkategori_id=$row[kategori_id]'>Edit</a>
+                        <a class='tombol-action' href='".BASE_URL."index.php?page=my_profile&module=kategori&action=form&kategori_id=$row[kategori_id]'>Edit</a>
                     </td>
                 </tr>";
 
