@@ -2,21 +2,32 @@
     $barang_id = isset($_GET['barang_id']) ? $_GET['barang_id'] : false;
 
     $nama_barang = "";
+    $kategori_id = "";
     $spesifikasi = "";
+    $gambar = "";
     $stok = "";
     $harga = "";
     $file = "";
+    $keterangan_gambar = "";
     $status = "";
     $button = "Add";
 
-    // if($barang_id) {
-    //     $query = mysqli_query($koneksi, "SELECT * FROM kategori WHERE barang_id='$barang_id'");
-    //     $row = mysqli_fetch_assoc($queryKategori);
+    if($barang_id) {
+        $query = mysqli_query($koneksi, "SELECT * FROM kategori WHERE barang_id='$barang_id'");
+        $row = mysqli_fetch_assoc($queryKategori);
 
-    //     $kategori = $row['kategori'];
-    //     $status = $row['status'];
-    //     $button = "Update";
-    // }
+        $nama_barang = $row['nama_barang'];
+        $kategori_id = $row['kategori_id'];
+        $spesifikasi = $row['spesifikasi'];
+        $gambar = $row['gambar'];
+        $harga = $row['harga'];
+        $stok = $row['stok'];
+        $status = $row['status'];
+        $button = "Update";
+
+        $keterangan_gambar = "(klick pilih gambar jika ingin mengganti gambar disamping)";
+        $gambar = "img src='".BASE_URL."images/barang/$gambar' style='width: 200px; vertical-align: middle;' />";
+    }
 ?>
 
 <form action="<?php echo BASE_URL."module/barang/action.php?barang_id=$barang_id"; ?>" method="POST" enctype="multipart/form-data">
@@ -28,7 +39,11 @@
                 <?php 
                     $query = mysqli_query($koneksi, "SELECT kategori_id, kategori FROM kategori WHERE status='on' ORDER BY kategori ASC");
                     while($row=mysqli_fetch_assoc($query){
-                        echo "<option value='$row[kategori_id]'>$row[kategori]</option>";
+                        if($kategori_id == $row['kategori_id']){
+                            echo "<option value='$row[kategori_id]' selected='true'>$row[kategori]</option>";
+                        }else{
+                            echo "<option value='$row[kategori_id]'>$row[kategori]</option>";
+                        }
                     });
                 ?>
             </select>
@@ -56,8 +71,10 @@
     </div>
 
     <div class="element-form">
-        <label for="">Gambar Product</label>
-        <span><input type="file" name="file" /></span>
+        <label for="">Gambar Product <?php echo $keterangan_gambar; ?></label>
+        <span>
+            <input type="file" name="file" /> <?php echo $gambar; ?>
+        </span>
     </div>
 
     <div class="element-form">
