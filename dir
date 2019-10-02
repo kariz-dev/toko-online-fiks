@@ -1,0 +1,38 @@
+[33mc094089[m[33m ([m[1;36mHEAD -> [m[1;32mstaging[m[33m, [m[1;31morigin/staging[m[33m)[m module lainnya - user level
+[33m5b9dbf1[m module barang - CKeditor
+[33mbe07485[m module barang - action gambar'
+[33mdd77985[m module barang - form edit barang
+[33me901c51[m module barang - membuat fungsi rupiah
+[33m0fb461b[m module barang - join
+[33mfc85a25[m module barang - action insert
+[33m73a230f[m module barang - lanjut form
+[33m748071a[m module barang - form barang
+[33m29322a8[m module barang - list barang
+[33m44a2166[m module kategori - css
+[33md6c2b1f[m module kategori - action update
+[33m2b80d6e[m module kategori - form edit kategori
+[33m670a973[m module kategori - action insert
+[33m79d5922[m module kategori - include di file action
+[33me8ce94f[m module kategori - form tambah kategoti
+[33mceb819e[m module kategori - page
+[33mcb058ec[m my profile - menu aktif
+[33m11e92c3[m my profile - protek login  dan module menu
+[33m04b4981[m my profile - css
+[33m5c560ef[m my profile - page
+[33m029af0e[m halaman login - logout
+[33m4be37c9[m halaman login - menggati halaman login dan register dengan nama user
+[33m7d6cd2e[m halaman login - protek halaman login dan register
+[33m1bf5ddc[m hamalan login - session login
+[33m083b739[m halaman login-proses login
+[33m4bcb92f[m form login
+[33mca143ba[m validasi email
+[33mea36bdc[m validasi password
+[33mf6554bd[m Pengecekan field
+[33ma90fd8b[m proses register
+[33ma5ce350[m membuat koneksi
+[33mc454a9c[m form register
+[33m1afa6b0[m membuat konten dinamis
+[33m6df730c[m style header
+[33m38e85be[m style header
+[33m78e61b0[m index file
+[33mb4df453[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m membuat konstanta
