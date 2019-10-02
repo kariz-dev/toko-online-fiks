@@ -300,7 +300,8 @@ body {
     border-radius: 5px;
 }
 
-#kanan #frame-barang ul li .button-add-cart a:hover {
+#kanan #frame-barang ul li .button-add-cart a:hover,
+#kanan #frame-barang ul li .button-add-cart a .active {
     background: orange;
 }
 
