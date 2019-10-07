@@ -340,7 +340,6 @@ body {
     text-decoration: none;
     padding: 5px 10px;
     display: inline-block;
-    float: right;
     border-radius: 5px;
 }
 
@@ -352,3 +351,10 @@ body {
     margin: 20px 5px;
 }
 
+.total-barang {
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    vertical-align: top;
+}
