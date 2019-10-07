@@ -13,8 +13,8 @@
                     <th class='kanan'>Harga Satuan</th>
                     <th class='kanan'>Total</th>
                 </tr>
-        </table>;
 
+        $subtotal = 0;
         foreach($keranjang AS key => $value){
             $barang_id = $key;
 
@@ -24,6 +24,7 @@
             $harga = $value["harga"];
 
             $total = $quantity * $harga;
+            $subtotal = $subtotal + $total;
 
             echo <tr>
                     <td class='tengah'>$no</td>
@@ -34,7 +35,19 @@
                     <td class='kanan hapus_item'>".rupiah($total)."<a href='".BASE_URL."hapus_item.php?barang_id=$barang_id'>X</a></td>
                 </tr>
             $no++;
-        }
+            }
+
+            echo <tr>
+                <td colspan='5' class='kanan'><b>Subtotal</b></td>
+                <td class='kanan'><b>".rupiah($subtotal)."</b></td>
+            </tr>
+
+        </table>;
+
+        echo <div class="frame-button-keranjang">
+                <a id="lanjut-belanja" href='".BASE_URL."index.php'>< Lanjut Belanja</a>
+                <a id="lanjut-pemesanan" href='".BASE_URL."index.php?page=data_pemesanan'>Lanjut Pemesanan ></a>
+            </div>;
     }
 ?>
 
