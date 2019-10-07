@@ -37,3 +37,19 @@
         }
     }
 ?>
+
+<script>
+    $(".update-quantity").on("input", function(e){
+        var barang_id = $(this).attr("name");
+        var value = $(this).val();
+
+        $ajax({
+                method: "POST",
+                url: "update-keranjang.php",
+                data: "barang_id="+barang_id+"&value="+value
+            });
+        .done(function(data){
+            location.reload();
+            });
+    });
+</script>
