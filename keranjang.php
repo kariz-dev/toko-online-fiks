@@ -1,19 +1,39 @@
 <?php
-    include_once("function/koneksi.php");
-    include_once("function/helper.php");
+    if($totalBarang == 0){
+        echo "<h3>Saat ini belum ada data di keranjang belanja anda</h3>";
+    }else{
+        $no=1;
 
-    $barang_id =$_GET['barang_id'];
-    $keranjang =isset()$_SESSION['keranjang'] ?$_SESSION['keranjang'] : false;
+        echo <table class='table-list'>
+                <tr class='baris-title'>
+                    <th class='tengah'>No</th>
+                    <th class='kiri'>Image</th>
+                    <th class='kir'>Nama Barang</th>
+                    <th class='tengah'>Qty</th>
+                    <th class='kanan'>Harga Satuan</th>
+                    <th class='kanan'>Total</th>
+                </tr>
+        </table>;
 
-    $query = mysqli_query($koneksi, "SELECT * FROM barang WHERE barang_id='$barang_id' ");
-    $row = mysqli_fetch_assoc($query);
+        foreach($keranjang AS key => $value){
+            $barang_id = $key;
 
-    $keranjang[$barang_id] = array("nama_barang" => $row["nama_barang"],
-                                    "gambar" => $row["gambar"],
-                                    "harga" => $row["harga"];
-                                    "quantity" => 1);
-    
-    $_SESSION["keranjang"] = $keranjang;
-    
-    header(: "location :".BASE_URL);
+            $nama_barang = $value["nama_barang"];
+            $quantity = $value["quantity"];
+            $gambar = $value["gambar"];
+            $harga = $value["harga"];
+
+            $total = $quantity * $harga;
+
+            echo <tr>
+                    <td class='tengah'>$no</td>
+                    <td class='kiri'><img src='".BASE_URL"images/barang/gambar' height='100px' /></td>
+                    <td class='kiri'>$nama_barang</td>
+                    <td class='tengah'><input type="text" name='$barang_id' value='$quantity' class='update-quantity' /></td>
+                    <td class='kanan'>".rupiah($harga)."</td>
+                    <td class='kanan'>".rupiah($total)."</td>
+                </tr>
+            $no++;
+        }
+    }
 ?>
