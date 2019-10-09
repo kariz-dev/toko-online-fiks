@@ -1,5 +1,5 @@
 <div id="frame-data-pengiriman">
-    <h3>Alamat Prngiriman Barang</h3>
+    <h3 class="label-data-pengiriman">Alamat Prngiriman Barang</h3>
 
     <div id="frame-form-pengiriman">
         <form action="<?php echo BASE_URL."proses_pemesanan.php"; ?>" method="POST">
@@ -26,7 +26,7 @@
                             $query = mysqli_query($koneksi, "SELECT * FROM kota");
 
                             while($row=mysqli_fetch_assoc($query)){
-                                echo "<option value='$row[kota_id]>$row[kota]</option>";
+                                echo "<option value='$row[kota_id]'>$row[kota](".rupiah($row['tarif']).")</option>";
                             }
                         ?>
                     </select>
@@ -41,9 +41,9 @@
 </div>
 
 <div id="frame-data-detail">
-    <h3>Detail Order</h3>                 
+    <h3 class="label-data-pengiriman">Detail Order</h3>                 
 
-    <div id="frmae-detail-order">
+    <div id="frame-detail-order">
         <table class="table-list">
             <tr>
                 <th class="kiri">Nama Barang</th>
