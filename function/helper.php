@@ -2,6 +2,11 @@
 
     define("BASE_URL", "http://localhost/fiks/");
 
+    $arrayStatusPesanan[0] = "Menunggu Pembayaran";
+    $arrayStatusPesanan[1] = "Pembayaran Sedang di Validasi";
+    $arrayStatusPesanan[2] = "Lunas";
+    $arrayStatusPesanan[3] = "Pembayaran ditolak";
+
     // membuat fungsi Rupiah
     function rupiah($nilai=0){
         $string = "Rp ". number_format($nilai);
