@@ -92,3 +92,11 @@
         <td class="kanan"><b><?php echo rupiah($subtotal); ?></b></td>
     </tr>
 </table>
+
+<div id="frame-keterangan-pembayaran">
+    <p>Silahkan lakukan pembayaran Ke Bank blabla <br>
+        Nomor Account: 00000-08990-0909 (A/N Fiks). <br>
+        Setelah melakukan pembayaran silahkan lakukan konfirmasi pembayaran
+        <a href="<?php echo BASE_URL."index.php?page=my_profile&module=pesanan&action=konfirmasi_pembayaran&pesanan_id=$pesanan_id'" ?>">Disini</a>
+    </p>
+</div>
